@@ -6,7 +6,7 @@ services:
         - db
       depends_on: 
         - db
-      expose: "8081"
+      expose: 8081
       restart: always
       environment:
         DB_HOST: host.docker.internal 
@@ -15,7 +15,7 @@ services:
         DB_USERNAME: "wizard"
         DB_PASSWORD: "wizard"
       volumes: 
-      - /Users/mylxsw/Downloads:/www/s
+      - /Users/mylxsw/Downloads:/www/wwwroot/wizard
     db:
       image: mysql
       environment: 
