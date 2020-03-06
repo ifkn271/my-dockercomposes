@@ -15,8 +15,7 @@ services:
         DB_USERNAME: "wizard"
         DB_PASSWORD: "wizard"
       volumes: 
-      -"/Users/mylxsw/Downloads:/www/s
-
+      - /Users/mylxsw/Downloads:/www/s
     db:
       image: mysql
       environment: 
