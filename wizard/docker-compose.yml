@@ -1,0 +1,29 @@
+version: "3"
+services: 
+    wizard:
+    image: mylxsw/wizard
+    links: 
+      - db
+    depends_on: 
+      - db
+    expose: "8081"
+    restart: always
+    environment:
+      DB_HOST: host.docker.internal 
+      DB_PORT: 3307  
+      DB_DATABASE: "wizard" 
+      DB_USERNAME: "wizard"
+      DB_PASSWORD: "wizard"
+    volumes: 
+      - 
+
+    db:
+      image: mysql
+      environment: 
+        MYSQL_ROOT_PASSWORD: "wizard"
+        MYSQL_USER: "wizard"
+        MYSQL_PASSWORD: "wizard" 
+        MYSQL_DATABASE: "wizard"
+      restart: always
+      expose: 
+        - 3307
